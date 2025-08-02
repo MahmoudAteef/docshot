@@ -259,6 +259,8 @@
         phoneError.textContent = "";
         addressError.textContent = "";
         statusMessage.textContent = "Please enter your information to get started";
+        statusMessage.classList.remove("hidden");
 
       };
+
    
