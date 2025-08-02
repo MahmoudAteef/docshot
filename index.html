@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Bibodent Photo Booth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+  <body>
+<h1>Bibodent Photo Booth</h1>
+<p id="statusMessage">Please enter your information to get started</p>
+
+<form id="userForm">
+  <input type="text" id="name" placeholder="Full Name" required /><br />
+  <span id="nameError" class="error-msg"></span>
+
+  <input
+    type="text"
+    id="phone"
+    placeholder="Mobile Number (11 digits)"
+    required
+    maxlength="11"
+  /><br />
+  <span id="phoneError" class="error-msg"></span>
+
+  <input type="text" id="address" placeholder="Your Address" required /><br />
+  <span id="addressError" class="error-msg"></span>
+
+  <button type="submit">Continue</button>
+</form>
+
+<div id="cameraSection" class="hidden">
+  <h2 id="cameraTitle">Smile and Get Ready!</h2>
+  <video id="video" autoplay playsinline></video><br />
+  <button id="snap">Take Photo</button>
+  <div id="countdown" class="countdown hidden"></div>
+</div>
+
+<canvas id="canvas" width="600" height="500"></canvas>
+<div id="qrcode"></div>
+
+<button id="shareBtn" class="hidden">Send via WhatsApp</button>
+<button id="backHome" class="hidden">Start Over</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
